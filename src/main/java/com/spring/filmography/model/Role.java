@@ -1,14 +1,18 @@
 package com.spring.filmography.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "role")
 @Getter
 @Setter
-public class Role {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Role extends GenericModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

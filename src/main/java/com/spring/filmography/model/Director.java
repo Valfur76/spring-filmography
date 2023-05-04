@@ -1,5 +1,6 @@
 package com.spring.filmography.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,10 +24,10 @@ public class Director extends GenericModel{
     @Column(name = "position")
     private String position;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "films_directors",
             joinColumns = @JoinColumn(name = "director_id"), foreignKey = @ForeignKey(name = "FK_DIRECTORS_FILMS"),
-            inverseJoinColumns = @JoinColumn(name = "film_id"), inverseForeignKey = @ForeignKey(name = "FK_FILM_DIRECTORS"))
+            inverseJoinColumns = @JoinColumn(name = "film_id"), inverseForeignKey = @ForeignKey(name = "FK_FILMS_DIRECTORS"))
     List<Film> films;
-
 }

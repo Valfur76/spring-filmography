@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "users",
@@ -19,7 +20,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "default_generator", sequenceName = "users_seq", allocationSize = 1)
-public class User extends GenericModel{
+public class User extends GenericModel {
     @Column(name = "login", nullable = false)
     private String login;
 
@@ -51,7 +52,10 @@ public class User extends GenericModel{
     private LocalDateTime createdWhen;
 
     @ManyToOne
-    @JoinColumn(name = "role_id", nullable = false,
+    @JoinColumn(name = "role_id",
             foreignKey = @ForeignKey(name = "FK_USERS_ROLES"))
     private Role role;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders;
 }

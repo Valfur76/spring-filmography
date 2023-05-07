@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "default_generator", sequenceName = "orders_sequence", allocationSize = 1)
-public class Order extends GenericModel{
+public class Order extends GenericModel {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false,
             foreignKey = @ForeignKey(name = "FK_ORDER_USER"))
@@ -31,5 +31,4 @@ public class Order extends GenericModel{
 
     @Column(name = "purchase", nullable = false)
     private Boolean purchase;
-
 }

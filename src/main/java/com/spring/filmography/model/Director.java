@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "default_generator", sequenceName = "director_sequence", allocationSize = 1)
-public class Director extends GenericModel{
+public class Director extends GenericModel {
 
     @Column(name = "director_fio", nullable = false)
     private String directorFIO;

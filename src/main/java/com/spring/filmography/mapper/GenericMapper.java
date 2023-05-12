@@ -1,7 +1,6 @@
 package com.spring.filmography.mapper;
 
 import com.spring.filmography.dto.GenericDTO;
-import com.spring.filmography.model.Film;
 import com.spring.filmography.model.GenericModel;
 import jakarta.annotation.PostConstruct;
 import org.modelmapper.Converter;

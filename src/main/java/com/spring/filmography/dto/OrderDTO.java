@@ -3,7 +3,6 @@ package com.spring.filmography.dto;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @ToString
 @AllArgsConstructor

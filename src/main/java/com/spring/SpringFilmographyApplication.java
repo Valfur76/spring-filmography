@@ -8,8 +8,8 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 @SpringBootApplication
 public class SpringFilmographyApplication implements CommandLineRunner {
-    @Autowired
-    private NamedParameterJdbcTemplate jdbcTemplate;
+//    @Autowired
+//    private NamedParameterJdbcTemplate jdbcTemplate;
     public static void main(String[] args) {
         SpringApplication.run(SpringFilmographyApplication.class, args);
     }

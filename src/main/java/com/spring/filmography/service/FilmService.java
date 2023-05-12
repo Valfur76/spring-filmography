@@ -29,6 +29,11 @@ public class FilmService extends GenericService<Film, FilmDTO> {
         this.orderRepository = orderRepository;
     }
 
+    @Override
+    public FilmDTO created(FilmDTO newObject) {
+        return super.created(newObject);
+    }
+
     public FilmDTO addDirector(final Long filmId, final Long directorId) {
         FilmDTO film = getOne(filmId);
         Director director = directorRepository.findById(directorId).orElseThrow(() -> new NotFoundException("Режиесер не найден."));

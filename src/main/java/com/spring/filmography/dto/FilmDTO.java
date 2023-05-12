@@ -20,5 +20,5 @@ public class FilmDTO extends GenericDTO {
     private Genre genre;
     private String description;
     private List<Long> directorsId;
-    private List<Long> filmOrder;
+    private List<Long> filmOrderId;
 }

@@ -1,6 +1,5 @@
 package com.spring.filmography.mapper;
 
-import com.spring.filmography.dto.FilmDTO;
 import com.spring.filmography.dto.UserDTO;
 import com.spring.filmography.model.GenericModel;
 import com.spring.filmography.model.User;

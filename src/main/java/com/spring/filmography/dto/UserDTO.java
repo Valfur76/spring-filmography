@@ -26,5 +26,4 @@ public class UserDTO extends GenericDTO {
     private LocalDateTime createdWhen;
     private RoleDTO role;
     private List<Long> userOrder;
-    private List<Long> filmsId;
 }

@@ -30,8 +30,8 @@ public class FilmService extends GenericService<Film, FilmDTO> {
     }
 
     @Override
-    public FilmDTO created(FilmDTO newObject) {
-        return super.created(newObject);
+    public FilmDTO create(FilmDTO newObject) {
+        return super.create(newObject);
     }
 
     public FilmDTO addDirector(final Long filmId, final Long directorId) {

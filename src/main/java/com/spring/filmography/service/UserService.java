@@ -13,10 +13,10 @@ public class UserService extends GenericService<User, UserDTO> {
         super(userRepository, userMapper);
     }
     @Override
-    public UserDTO created(UserDTO newObject) {
+    public UserDTO create(UserDTO newObject) {
         RoleDTO roleDTO = new RoleDTO();
         roleDTO.setId(1L);
         newObject.setRole(roleDTO);
-        return super.created(newObject);
+        return super.create(newObject);
     }
 }

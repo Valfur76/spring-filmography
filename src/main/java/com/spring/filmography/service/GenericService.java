@@ -30,7 +30,7 @@ public abstract class GenericService<E extends GenericModel, D extends GenericDT
                 .orElseThrow(() -> new NotFoundException("Данные по заданному id:" + id + " не найдены.")));
     }
 
-    public D created(D newObject) {
+    public D create(D newObject) {
         newObject.setCreatedWhen(LocalDateTime.now());
         return mapper.toDTO(repository.save(mapper.toEntity(newObject)));
     }

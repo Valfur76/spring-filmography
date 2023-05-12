@@ -41,7 +41,7 @@ public abstract class GenericController<E extends GenericModel, D extends Generi
     @RequestMapping(value = "/add", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<D> create(@RequestBody D newEntity) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.created(newEntity));
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.create(newEntity));
     }
 
     @Operation(description = "Обновить запись", method = "update")
